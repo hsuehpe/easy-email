@@ -2,7 +2,7 @@
   "name": "@hsuehpe/easy-email-extensions",
   "license": "MIT",
   "description": "Email editor",
-  "version": "4.11.1",
+  "version": "4.11.2-alpha.0",
   "author": "hsuehpe",
   "repository": {
     "type": "git",
