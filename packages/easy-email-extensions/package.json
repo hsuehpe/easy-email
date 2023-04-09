@@ -76,6 +76,8 @@
     "vite-plugin-style-import": "^1.3.0"
   },
   "dependencies": {
+    "@hsuehpe/easy-email-core": "^4.11.2-alpha.0",
+    "@hsuehpe/easy-email-editor": "^4.11.2-alpha.0",
     "@arco-design/web-react": "^2.36.1",
     "codemirror": "^5.63.3",
     "color": "^4.2.3",
@@ -93,8 +95,8 @@
     "react-use": "^17.3.1"
   },
   "peerDependencies": {
-    "easy-email-core": "^4.3.6",
-    "easy-email-editor": "^4.3.6",
+    "@hsuehpe/easy-email-core": "^4.3.6",
+    "@hsuehpe/easy-email-editor": "^4.3.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-final-form": "^6.5.7"
