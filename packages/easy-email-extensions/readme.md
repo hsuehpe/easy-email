@@ -5,6 +5,7 @@
 Provide default UI components, when they don’t meet your needs, you can refer to it and write your own.
 
 It also provides the following utils:
+
 - MjmlToJson
 
 ## usage
@@ -21,8 +22,8 @@ $ yarn add easy-email-extensions
 
 ```js
 import React from 'react';
-import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
+import { BlockManager, BasicType, AdvancedType } from '@hsuehpe/easy-email-core';
+import { EmailEditor, EmailEditorProvider } from '@hsuehpe/easy-email-editor';
 import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
 import { useWindowSize } from 'react-use';
 
@@ -178,7 +179,7 @@ export default function App() {
   - You can add or overwrite popover's preset blocks
 
     ```tsx
-    import { BasicType } from 'easy-email-core';
+    import { BasicType } from '@hsuehpe/easy-email-core';
     import { BlockMarketManager, BlockMaskWrapper } from 'easy-email-extensions';
 
     BlockMarketManager.addCategories([

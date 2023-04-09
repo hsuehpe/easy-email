@@ -6,7 +6,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'easy-email-core': path.resolve('../easy-email-core'),
     },
   },
   define: {},
@@ -30,7 +29,7 @@ export default defineConfig({
         'react-dom/server',
         'mjml-browser',
         'react-final-form',
-        'easy-email-core',
+        '@hsuehpe/easy-email-core',
       ],
       output: {},
     },

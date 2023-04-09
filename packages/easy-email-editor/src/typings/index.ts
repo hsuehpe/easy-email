@@ -1,4 +1,4 @@
-import { IPage } from 'easy-email-core';
+import { IPage } from '@hsuehpe/easy-email-core';
 
 export interface IEmailTemplate {
   content: IPage;
