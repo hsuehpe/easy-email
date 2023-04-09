@@ -130,7 +130,7 @@ export function MergeTagBadgePrompt() {
 
   return (
     <>
-      {root && createPortal(<style>{stylesText}</style>, root)}
+      {root && createPortal(<style>{stylesText}</style>, root as any)}
       {textContainer &&
         createPortal(
           <div
