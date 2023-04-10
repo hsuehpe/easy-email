@@ -21,12 +21,21 @@ export default defineConfig({
       '@arco-themes': path.resolve('./node_modules/@arco-themes'),
       '@': path.resolve('../packages/easy-email-editor/src'),
       'easy-email-core': path.resolve('../packages/easy-email-core/src/index.tsx'),
+      '@hsuehpe/easy-email-core': path.resolve(
+        '../packages/easy-email-core/src/index.tsx',
+      ),
       'easy-email-editor/lib/locales.json': path.resolve(
         '../packages/easy-email-editor/public/locales.json',
       ),
       'easy-email-localization': path.resolve('../packages/easy-email-localization'),
       'easy-email-editor': path.resolve('../packages/easy-email-editor/src/index.tsx'),
+      '@hsuehpe/easy-email-editor': path.resolve(
+        '../packages/easy-email-editor/src/index.tsx',
+      ),
       'easy-email-extensions': path.resolve(
+        '../packages/easy-email-extensions/src/index.tsx',
+      ),
+      '@hsuehpe/easy-email-extensions': path.resolve(
         '../packages/easy-email-extensions/src/index.tsx',
       ),
       '@arco-design/web-react/dist/css/arco.css': path.resolve(
