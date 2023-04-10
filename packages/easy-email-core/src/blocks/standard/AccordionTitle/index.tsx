@@ -2,7 +2,7 @@ import React from 'react';
 import { IBlock, IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { t } from '@core/utils';
 import { BasicBlock } from '@core/components/BasicBlock';
 
@@ -22,7 +22,7 @@ export const AccordionTitle: IBlock = createBlock({
     return t('Accordion title');
   },
   type: BasicType.ACCORDION_TITLE,
-  create: (payload) => {
+  create: payload => {
     const defaultData: IAccordionTitle = {
       type: BasicType.ACCORDION_TITLE,
       data: {
@@ -41,7 +41,10 @@ export const AccordionTitle: IBlock = createBlock({
   validParentType: [BasicType.ACCORDION],
   render(params) {
     return (
-      <BasicBlock params={params} tag='mj-accordion-title'>
+      <BasicBlock
+        params={params}
+        tag='mj-accordion-title'
+      >
         {params.data.data.value.content}
       </BasicBlock>
     );

@@ -13,7 +13,7 @@ import {
   useHoverIdx,
   useRefState,
 } from '@hsuehpe/easy-email-editor';
-import { debounce, get } from 'lodash';
+import { debounce, get } from 'lodash-es';
 import { IBlockDataWithId } from '..';
 import { BlockTreeProps } from '../components/BlockTree';
 

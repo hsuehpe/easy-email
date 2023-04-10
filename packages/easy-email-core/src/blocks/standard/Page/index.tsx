@@ -3,7 +3,7 @@ import { IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
 import { Wrapper } from '../Wrapper';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 
 import { generaMjmlMetaData } from '@core/utils/generaMjmlMetaData';
 import { BlockRenderer } from '@core/components/BlockRenderer';
@@ -57,7 +57,7 @@ export const Page = createBlock<IPage>({
           fonts: [],
           responsive: true,
           'font-family':
-            '-apple-system, BlinkMacSystemFont, \'Segoe UI\', \'Roboto\', \'Oxygen\', \'Ubuntu\', \'Cantarell\', \'Fira Sans\', \'Droid Sans\',\'Helvetica Neue\', sans-serif',
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif",
           'text-color': '#000000',
         },
       },

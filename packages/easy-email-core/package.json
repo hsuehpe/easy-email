@@ -44,7 +44,7 @@
     "@types/jest": "^26.0.24",
     "@types/js-beautify": "^1.13.3",
     "@types/jsdom": "^16.2.13",
-    "@types/lodash": "^4.14.178",
+    "@types/lodash-es": "^4.17.7",
     "@types/node": "^16.11.7",
     "@types/react": "17.0.2",
     "@types/react-dom": "^17.0.11",
@@ -74,7 +74,7 @@
   "dependencies": {
     "he": "^1.2.0",
     "js-beautify": "^1.14.4",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "uuid": "^8.3.2"
   },
   "peerDependencies": {

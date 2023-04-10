@@ -2,7 +2,7 @@ import React from 'react';
 import { IBlock, IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { BasicBlock } from '@core/components/BasicBlock';
 import { t } from '@core/utils';
 
@@ -17,7 +17,7 @@ export const Spacer: IBlock<ISpacer> = createBlock({
     return t('Spacer');
   },
   type: BasicType.SPACER,
-  create: (payload) => {
+  create: payload => {
     const defaultData: ISpacer = {
       type: BasicType.SPACER,
       data: {
@@ -32,6 +32,11 @@ export const Spacer: IBlock<ISpacer> = createBlock({
   },
   validParentType: [BasicType.COLUMN, BasicType.HERO],
   render(params) {
-    return <BasicBlock params={params} tag="mj-spacer" />;
+    return (
+      <BasicBlock
+        params={params}
+        tag='mj-spacer'
+      />
+    );
   },
 });

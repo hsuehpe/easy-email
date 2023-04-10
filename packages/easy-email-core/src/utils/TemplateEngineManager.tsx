@@ -1,34 +1,33 @@
 import { AdvancedBlock, Operator } from '@core/blocks/advanced/generateAdvancedBlock';
 import { Raw } from '@core/components';
-import { isNumber } from 'lodash';
+import { isNumber } from 'lodash-es';
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function generateIterationTemplate(
   option: NonNullable<AdvancedBlock['data']['value']['iteration']>,
-  content: React.ReactElement
+  content: React.ReactElement,
 ) {
   return (
     <>
       <Raw>
         {`
         <!-- htmlmin:ignore -->
-        {% for ${option.itemName} in ${option.dataSource} ${option.limit ? `limit:${option.limit}` : ''
-          } %}
+        {% for ${option.itemName} in ${option.dataSource} ${
+          option.limit ? `limit:${option.limit}` : ''
+        } %}
         <!-- htmlmin:ignore -->
         `}
       </Raw>
       {content}
-      <Raw>
-        {' <!-- htmlmin:ignore -->{% endfor %}  <!-- htmlmin:ignore -->'}
-      </Raw>
+      <Raw>{' <!-- htmlmin:ignore -->{% endfor %}  <!-- htmlmin:ignore -->'}</Raw>
     </>
   );
 }
 
 function generateConditionTemplate(
   option: NonNullable<AdvancedBlock['data']['value']['condition']>,
-  content: React.ReactElement
+  content: React.ReactElement,
 ) {
   const { symbol, groups } = option;
 
@@ -105,9 +104,9 @@ export class TemplateEngineManager {
     this.tags[option.name] = option.templateGenerateFn as any;
   }
 
-  public static generateTagTemplate<
-    T extends keyof typeof TemplateEngineManager['tags']
-  >(name: T): typeof TemplateEngineManager['tags'][T] {
+  public static generateTagTemplate<T extends keyof typeof TemplateEngineManager['tags']>(
+    name: T,
+  ): typeof TemplateEngineManager['tags'][T] {
     return this.tags[name];
   }
 }

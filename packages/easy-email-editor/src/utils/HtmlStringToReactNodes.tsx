@@ -4,7 +4,7 @@ import {
   getNodeTypeFromClassName,
   MERGE_TAG_CLASS_NAME,
 } from '@hsuehpe/easy-email-core';
-import { camelCase } from 'lodash';
+import { camelCase } from 'lodash-es';
 import React from 'react';
 import { isTextBlock } from './isTextBlock';
 import { MergeTagBadge } from './MergeTagBadge';

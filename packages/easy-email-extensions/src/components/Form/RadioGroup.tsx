@@ -1,5 +1,5 @@
 import { Radio, RadioGroupProps as ArcoRadioGroupProps } from '@arco-design/web-react';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import React from 'react';
 import { Stack } from '@hsuehpe/easy-email-editor';
 

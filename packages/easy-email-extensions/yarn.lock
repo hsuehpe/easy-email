@@ -1301,10 +1301,10 @@
     lodash "^4.17.21"
     uuid "^8.3.2"
 
-"@hsuehpe/easy-email-editor@^4.11.3-alpha.0":
-  version "4.11.3-alpha.0"
-  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-editor/-/easy-email-editor-4.11.3-alpha.0.tgz#169acc4a624ddddcc4927e94d26d53120c52adbe"
-  integrity sha512-kWtrHhLI64yCicOWp0Oe2pZAAF68NZVZqZLvO609hOtmFHdBD9tOCSWFgVWWb+qp4v0FwTCzXJSN14+f1aDsOA==
+"@hsuehpe/easy-email-editor@^4.11.4-alpha.0":
+  version "4.11.4-alpha.0"
+  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-editor/-/easy-email-editor-4.11.4-alpha.0.tgz#ff0c521456340129a8241722d9748dc8aeb2d6f3"
+  integrity sha512-PA5Ffb2a37PI3qVP2Xi9dd/V68PwOaOoIEZ/NzhlJIQvUc6clkKJ7Uje8h+OA7ZDt6Llhiod5AoJWV5p4KrtxQ==
   dependencies:
     "@hsuehpe/easy-email-core" "^4.11.2-alpha.0"
     final-form "^4.20.4"
@@ -2603,10 +2603,17 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash@^4.14.178":
-  version "4.14.178"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
-  integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
+"@types/lodash-es@^4.17.7":
+  version "4.17.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.7.tgz#22edcae9f44aff08546e71db8925f05b33c7cc40"
+  integrity sha512-z0ptr6UI10VlU6l5MYhGwS4mC8DZyYer2mCoyysZtSF7p26zOX8UpbrV0YpNYLGS8K4PUFIyEr62IMFFjveSiQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.192"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.192.tgz#5790406361a2852d332d41635d927f1600811285"
+  integrity sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==
 
 "@types/minimatch@^3.0.3":
   version "3.0.5"
@@ -6582,7 +6589,7 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.15:
+lodash-es@^4.17.15, lodash-es@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==

@@ -2,7 +2,7 @@ import { IBlock } from '@core/typings';
 import { getAdapterAttributesString, getChildIdx } from '@core/utils';
 import { getImg } from '@core/utils/getImg';
 import { getPlaceholder } from '@core/utils/getPlaceholder';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import React from 'react';
 import { BlockRenderer } from './BlockRenderer';
 
@@ -31,17 +31,13 @@ export function BasicBlock(props: {
   if (mode === 'testing' && tag === 'mj-image') {
     let url = data.attributes.src;
 
-    if (
-      url === '' ||
-      /{{([\s\S]+?)}}/g.test(url) ||
-      /\*\|([^\|\*]+)\|\*/g.test(url)
-    ) {
+    if (url === '' || /{{([\s\S]+?)}}/g.test(url) || /\*\|([^\|\*]+)\|\*/g.test(url)) {
       const adapterData = omit(params, 'data.attributes.src');
 
       return (
         <>
           {`<${tag} ${getAdapterAttributesString(adapterData)} src="${getImg(
-            'IMAGE_59'
+            'IMAGE_59',
           )}">`}
 
           {`</${tag}>`}

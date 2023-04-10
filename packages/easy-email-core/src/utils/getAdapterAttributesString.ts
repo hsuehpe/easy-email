@@ -1,14 +1,12 @@
 import { IBlock } from '@core/typings';
 import { EMAIL_BLOCK_CLASS_NAME } from '@core/constants';
 
-import { isString } from 'lodash';
+import { isString } from 'lodash-es';
 
 import { classnames } from '@core/utils/classnames';
 import { getNodeIdxClassName, getNodeTypeClassName } from '@core/utils';
 
-export function getAdapterAttributesString(
-  params: Parameters<IBlock['render']>[0]
-) {
+export function getAdapterAttributesString(params: Parameters<IBlock['render']>[0]) {
   const { data, idx } = params;
   const isTest = params.mode === 'testing';
   const attributes = { ...data.attributes };
@@ -19,14 +17,14 @@ export function getAdapterAttributesString(
       attributes['css-class'],
       EMAIL_BLOCK_CLASS_NAME,
       getNodeIdxClassName(idx),
-      getNodeTypeClassName(data.type)
+      getNodeTypeClassName(data.type),
     );
   }
 
   if (keepClassName) {
     attributes['css-class'] = classnames(
       attributes['css-class'],
-      getNodeTypeClassName(data.type)
+      getNodeTypeClassName(data.type),
     );
   }
 

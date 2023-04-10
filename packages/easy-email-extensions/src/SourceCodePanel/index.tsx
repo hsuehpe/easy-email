@@ -13,7 +13,7 @@ import {
   useEditorContext,
   useEditorProps,
 } from '@hsuehpe/easy-email-editor';
-import { cloneDeep } from 'lodash';
+import { cloneDeep } from 'lodash-es';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { MjmlToJson } from '@extensions/utils/MjmlToJson';
 

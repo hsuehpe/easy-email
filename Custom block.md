@@ -164,7 +164,7 @@ import { IBlockData, BasicType, components, createCustomBlock } from 'easy-email
 
 import { CustomBlocksType } from '../constants';
 import React from 'react';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 
 const { Column, Section, Wrapper, Text, Button, Image, Group } = components;
 

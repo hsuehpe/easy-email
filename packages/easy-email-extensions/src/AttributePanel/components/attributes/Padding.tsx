@@ -10,7 +10,7 @@ import {
 import { createBlockDataByType } from '@hsuehpe/easy-email-core';
 import { Form, useFormState } from 'react-final-form';
 import { Button, Grid, Space, Tooltip } from '@arco-design/web-react';
-import { get } from 'lodash';
+import { get } from 'lodash-es';
 import { pixelAdapter } from '../adapter';
 
 export interface PaddingProps {

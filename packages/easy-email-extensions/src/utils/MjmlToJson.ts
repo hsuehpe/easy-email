@@ -1,5 +1,5 @@
 import { BlockManager, IPage, BasicType, IBlockData } from '@hsuehpe/easy-email-core';
-import { identity, isString, pickBy } from 'lodash';
+import { identity, isString, pickBy } from 'lodash-es';
 import { parseXMLtoBlock } from './parseXMLtoBlock';
 
 export function MjmlToJson(data: MjmlBlockItem | string): IPage {

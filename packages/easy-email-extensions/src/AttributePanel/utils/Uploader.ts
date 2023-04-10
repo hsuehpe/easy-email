@@ -1,4 +1,4 @@
-import { uniqueId } from 'lodash';
+import { uniqueId } from 'lodash-es';
 import { PromiseEach } from './PromiseEach';
 
 interface Options {
@@ -51,11 +51,9 @@ export class Uploader {
   }
 
   private createInput() {
-    Array.from(document.querySelectorAll('.uploader-form-input')).forEach(
-      (el) => {
-        el && document.body.removeChild(el);
-      }
-    );
+    Array.from(document.querySelectorAll('.uploader-form-input')).forEach(el => {
+      el && document.body.removeChild(el);
+    });
     const el = document.createElement('input');
     el.className = 'uploader-form-input';
     el.type = 'file';
@@ -75,15 +73,15 @@ export class Uploader {
   }
 
   public async uploadFiles(files: File[]) {
-    const results = files.map((file) => ({ file }));
-    const uploadList: UploadItem[] = results.map((item) => ({
+    const results = files.map(file => ({ file }));
+    const uploadList: UploadItem[] = results.map(item => ({
       url: '',
       status: 'pending',
       idx: `uploader-${uniqueId()}`,
     }));
 
     // 开始上传
-    this.handler.start.map((fn) => fn(uploadList));
+    this.handler.start.map(fn => fn(uploadList));
 
     await PromiseEach(
       results.map(async (file, index) => {
@@ -94,13 +92,13 @@ export class Uploader {
         } catch (error) {
           uploadList[index].status = 'error';
         } finally {
-          this.handler.progress.map((fn) => fn(uploadList));
+          this.handler.progress.map(fn => fn(uploadList));
         }
-      })
+      }),
     );
 
     // 上传完成
-    this.handler.end.map((fn) => fn(uploadList));
+    this.handler.end.map(fn => fn(uploadList));
   }
 
   private async uploadFile(result: { file: File }) {
@@ -170,22 +168,16 @@ export class Uploader {
     };
   }
 
-  public on<K extends keyof UploaderEventMap>(
-    event: K,
-    fn: UploaderEventMap[K]
-  ) {
+  public on<K extends keyof UploaderEventMap>(event: K, fn: UploaderEventMap[K]) {
     // UploaderEventMapHandle[K] === UploaderEventMap[K][]
     const handler = this.handler[event] as UploaderEventMap[K][];
     handler.push(fn);
   }
 
-  public off<K extends keyof UploaderEventMap>(
-    event: K,
-    fn: UploaderEventMap[K]
-  ) {
+  public off<K extends keyof UploaderEventMap>(event: K, fn: UploaderEventMap[K]) {
     const handles = this.handler[event] as UploaderEventMap[K][];
     this.handler[event] = handles.filter(
-      (item) => item !== fn
+      item => item !== fn,
     ) as UploaderEventMapHandle[K];
   }
 }

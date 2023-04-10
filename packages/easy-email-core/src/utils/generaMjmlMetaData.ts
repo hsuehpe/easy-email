@@ -1,5 +1,5 @@
 import { IPage } from '@core/blocks';
-import { isObject, isString } from 'lodash';
+import { isObject, isString } from 'lodash-es';
 
 export function generaMjmlMetaData(data: IPage) {
   const values = data.data.value;
@@ -17,19 +17,17 @@ export function generaMjmlMetaData(data: IPage) {
   return `
     <mj-html-attributes>
       ${attributes
-        .filter((key) => values[key as keyof typeof values] !== undefined)
-        .map((key) => {
+        .filter(key => values[key as keyof typeof values] !== undefined)
+        .map(key => {
           const attKey = key as keyof typeof values;
           const isMultipleAttributes = isObject(values[attKey]);
           const value = isMultipleAttributes
             ? Object.keys(values[attKey]!)
-                .map((childKey) => {
+                .map(childKey => {
                   const childValue = (values[attKey] as any)[childKey];
 
                   return `${childKey}="${
-                    isString(childValue)
-                      ? childValue.replace(/"/gm, '')
-                      : childValue
+                    isString(childValue) ? childValue.replace(/"/gm, '') : childValue
                   }"`;
                 })
                 .join(' ')

@@ -21,7 +21,7 @@ import {
   IBlockData,
 } from '@hsuehpe/easy-email-core';
 import styles from './index.module.scss';
-import { cloneDeep, get, isString, isEqual } from 'lodash';
+import { cloneDeep, get, isString, isEqual } from 'lodash-es';
 import { EyeIcon } from './components/EyeIcon';
 import { BlockTree, BlockTreeProps } from './components/BlockTree';
 import { ContextMenu } from './components/ContextMenu';

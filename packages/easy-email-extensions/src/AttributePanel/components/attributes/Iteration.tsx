@@ -31,7 +31,10 @@ export function Iteration() {
     [change, focusIdx, iteration],
   );
 
-  if (!focusBlock?.type || !Object.values(AdvancedType).includes(focusBlock?.type)) {
+  if (
+    !focusBlock?.type ||
+    !Object.values(AdvancedType).includes(focusBlock?.type as AdvancedType)
+  ) {
     return null;
   }
 

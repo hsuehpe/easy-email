@@ -2,7 +2,7 @@ import React from 'react';
 import { IBlock, IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { t } from '@core/utils';
 import { BasicBlock } from '@core/components/BasicBlock';
 
@@ -18,7 +18,7 @@ export const Group: IBlock<IGroup> = createBlock({
     return t('Group');
   },
   type: BasicType.GROUP,
-  create: (payload) => {
+  create: payload => {
     const defaultData: IGroup = {
       type: BasicType.GROUP,
       data: {
@@ -35,6 +35,11 @@ export const Group: IBlock<IGroup> = createBlock({
   validParentType: [BasicType.SECTION],
 
   render(params) {
-    return <BasicBlock params={params} tag="mj-group" />;
+    return (
+      <BasicBlock
+        params={params}
+        tag='mj-group'
+      />
+    );
   },
 });

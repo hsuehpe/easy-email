@@ -1,7 +1,7 @@
 import { BlockManager } from '../BlockManager';
 import { BasicType } from '@core/constants';
 import { createCustomBlock } from '../createCustomBlock';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { Section, Column, Image, Button } from '../../components';
 import { IBlockData } from '@core/typings';
 import React from 'react';
@@ -47,7 +47,11 @@ const myFirstBlock = createCustomBlock({
     const instance = (
       <Section padding='20px'>
         <Column>
-          <Image padding='0px 0px 0px 0px' width='100px' src={imageUrl} />
+          <Image
+            padding='0px 0px 0px 0px'
+            width='100px'
+            src={imageUrl}
+          />
           <Button
             background-color={attributes['background-color']}
             color={attributes['text-color']}
@@ -74,7 +78,7 @@ describe('Test createCustomBlock', () => {
           children: [myFirstBlock.create()],
         }),
         mode: 'production',
-      })
+      }),
     ).toMatchSnapshot();
   });
 });

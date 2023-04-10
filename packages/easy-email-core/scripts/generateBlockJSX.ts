@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as jsdom from 'jsdom';
-import { camelCase } from 'lodash';
+import { camelCase } from 'lodash-es';
 import { BlockManager } from '../src/utils/BlockManager';
 
 const { JSDOM } = jsdom;
@@ -17,11 +17,11 @@ function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 let indexFileContent = ``;
-BlockManager.getBlocks().forEach((item) => {
+BlockManager.getBlocks().forEach(item => {
   const fileName = capitalizeFirstLetter(camelCase(item.type));
   const interfaceName = `I${fileName}`;
   const code = `
-  import { omit } from 'lodash';
+  import { omit } from 'lodash-es';
   import { BasicType } from '@core/constants';
   import { RecursivePartial } from '@core/typings';
   import React from 'react';
@@ -47,7 +47,7 @@ BlockManager.getBlocks().forEach((item) => {
   `;
   try {
     fs.mkdirSync(cwd + '/src/components');
-  } catch (error) { }
+  } catch (error) {}
   fs.writeFileSync(cwd + '/src/components/' + fileName + '.tsx', code);
   indexFileContent += `export {${fileName}} from './${fileName}'\n`;
 });

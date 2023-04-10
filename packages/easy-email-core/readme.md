@@ -5,6 +5,7 @@
 This is the core easy-email library, composed by the following parts
 
 - utils
+
   - JsonToMjml
   - BlockManager
   - createCustomBlock
@@ -392,7 +393,7 @@ console.log(
 ## Customize your block
 
 ```tsx
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import {
   createCustomBlock,
   IBlockData,

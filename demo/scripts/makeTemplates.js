@@ -1,18 +1,18 @@
 import fs from 'fs-extra';
 import path from 'path';
-import _ from 'lodash';
+import _ from 'lodash-es';
 
-let text = "";
+let text = '';
 
 const cwd = process.cwd();
-const templateFolderPath = path.join(cwd, "/src/templates");
+const templateFolderPath = path.join(cwd, '/src/templates');
 const states = fs.readdirSync(templateFolderPath);
 const list = [];
-states.forEach((item) => {
+states.forEach(item => {
   const data = fs.readJsonSync(path.join(templateFolderPath, item));
   list.push({
     path: item,
-    ..._.omit(data, "content"),
+    ..._.omit(data, 'content'),
   });
   text += `
   case '${item}':
@@ -38,5 +38,5 @@ export async function getTemplate(id: string|number) {
 
 `;
 
-fs.writeFileSync(path.join(cwd, "src/config/getTemplate.ts"), content);
-fs.writeJsonSync(path.join(cwd, "src/config/templates.json"), list);
+fs.writeFileSync(path.join(cwd, 'src/config/getTemplate.ts'), content);
+fs.writeJsonSync(path.join(cwd, 'src/config/templates.json'), list);

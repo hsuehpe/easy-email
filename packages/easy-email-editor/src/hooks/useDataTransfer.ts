@@ -1,6 +1,6 @@
 import { useCallback, useContext, useMemo } from 'react';
 import { HoverIdxContext } from '@/components/Provider/HoverIdxProvider';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 export function useDataTransfer() {
   const { dataTransfer, setDataTransfer } = useContext(HoverIdxContext);
@@ -15,6 +15,6 @@ export function useDataTransfer() {
       dataTransfer,
       setDataTransfer: setDataTransferDebounce,
     }),
-    [dataTransfer, setDataTransferDebounce]
+    [dataTransfer, setDataTransferDebounce],
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { BasicBlock } from '@core/components/BasicBlock';
 import { t } from '@core/utils';
 
@@ -24,7 +24,7 @@ export const Divider = createBlock<IDivider>({
     return t('Divider');
   },
   type: BasicType.DIVIDER,
-  create: (payload) => {
+  create: payload => {
     const defaultData: IDivider = {
       type: BasicType.DIVIDER,
       data: {
@@ -43,6 +43,11 @@ export const Divider = createBlock<IDivider>({
   },
   validParentType: [BasicType.COLUMN, BasicType.HERO],
   render(params) {
-    return <BasicBlock params={params} tag="mj-divider" />;
+    return (
+      <BasicBlock
+        params={params}
+        tag='mj-divider'
+      />
+    );
   },
 });

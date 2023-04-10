@@ -18,7 +18,7 @@ import {
 } from '@arco-design/web-react';
 import { SelectField, TextField } from '@extensions/components/Form';
 import React, { useCallback } from 'react';
-import { cloneDeep, get, upperFirst } from 'lodash';
+import { cloneDeep, get, upperFirst } from 'lodash-es';
 import { IconDelete, IconPlus } from '@arco-design/web-react/icon';
 import { useField } from 'react-final-form';
 
@@ -115,7 +115,10 @@ export function Condition() {
     [change, condition, values],
   );
 
-  if (!focusBlock?.type || !Object.values(AdvancedType).includes(focusBlock?.type)) {
+  if (
+    !focusBlock?.type ||
+    !Object.values(AdvancedType).includes(focusBlock?.type as AdvancedType)
+  ) {
     return null;
   }
 
