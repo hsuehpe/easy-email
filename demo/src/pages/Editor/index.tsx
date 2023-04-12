@@ -306,6 +306,7 @@ export default function Editor() {
       values: IEmailTemplate,
       form: FormApi<IEmailTemplate, Partial<IEmailTemplate>>,
     ) => {
+      console.log(values);
       pushEvent({ event: 'EmailSave' });
       if (id) {
         const isChanged = !(
@@ -360,6 +361,22 @@ export default function Editor() {
     return blueTheme;
   }, [theme]);
 
+  const schema = useMemo(() => {
+    return (values: IEmailTemplate) => {
+      const errors: any = {};
+      if (!values.subject) {
+        errors.subject = 'Subject is required';
+      }
+      if (!values.subTitle) {
+        errors.subTitle = 'SubTitle is required';
+      }
+      if (!values.content) {
+        errors.content = 'Content is required';
+      }
+      return errors;
+    };
+  }, []);
+
   if (!templateData && loading) {
     return (
       <Loading loading={loading}>
@@ -396,6 +413,7 @@ export default function Editor() {
         onBeforePreview={onBeforePreview}
         socialIcons={[]}
         locale={localesData[locale]}
+        validationSchema={schema}
       >
         {({ values }, { submit }) => {
           return (
