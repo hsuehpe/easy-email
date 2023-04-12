@@ -30,11 +30,7 @@ import { UserStorage } from '@demo/utils/user-storage';
 
 import { useCollection } from './components/useCollection';
 import { AdvancedType, BasicType, IBlockData, JsonToMjml } from 'easy-email-core';
-import {
-  BlockMarketManager,
-  ExtensionProps,
-  StandardLayout,
-} from 'easy-email-extensions';
+import { BlockMarketManager, ExtensionProps, SimpleLayout } from 'easy-email-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 
 // Register external blocks
@@ -492,12 +488,12 @@ export default function Editor() {
                   </Stack>
                 }
               />
-              <StandardLayout
+              <SimpleLayout
                 compact={!smallScene}
                 categories={defaultCategories}
               >
                 <EmailEditor />
-              </StandardLayout>
+              </SimpleLayout>
               <AutoSaveAndRestoreEmail />
             </>
           );

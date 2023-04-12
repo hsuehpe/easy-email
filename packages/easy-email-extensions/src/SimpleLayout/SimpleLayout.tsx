@@ -15,11 +15,11 @@ export const SimpleLayout: React.FC<
   {
     showSourceCode?: boolean;
     defaultShowLayer?: boolean;
+    collapsed?: boolean;
   } & BlockLayerProps
 > = props => {
   const { height: containerHeight } = useEditorProps();
-  const { showSourceCode = true, defaultShowLayer = true } = props;
-  const [collapsed, setCollapsed] = useState(!defaultShowLayer);
+  const { showSourceCode = true, defaultShowLayer = true, collapsed } = props;
   return (
     <ConfigProvider locale={enUS}>
       <Layout
