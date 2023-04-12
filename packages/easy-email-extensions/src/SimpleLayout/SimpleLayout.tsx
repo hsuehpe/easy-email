@@ -15,11 +15,12 @@ export const SimpleLayout: React.FC<
   {
     showSourceCode?: boolean;
     defaultShowLayer?: boolean;
+    collapsed?: boolean;
   } & BlockLayerProps
 > = props => {
   const { height: containerHeight } = useEditorProps();
-  const { showSourceCode = true, defaultShowLayer = true } = props;
-  const [collapsed, setCollapsed] = useState(!defaultShowLayer);
+  const { showSourceCode = true, defaultShowLayer = true, collapsed } = props;
+  //const [collapsed, setCollapsed] = useState(!defaultShowLayer);
   return (
     <ConfigProvider locale={enUS}>
       <Layout
@@ -54,7 +55,7 @@ export const SimpleLayout: React.FC<
                 }}
                 icon={collapsed ? <IconRight /> : <IconLeft />}
                 shape='round'
-                onClick={() => setCollapsed(v => !v)}
+                //onClick={() => setCollapsed(v => !v)}
               />
             </Card.Grid>
             <Card.Grid

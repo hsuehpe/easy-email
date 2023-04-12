@@ -1291,27 +1291,27 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@hsuehpe/easy-email-core@^4.11.2-alpha.0":
-  version "4.11.2-alpha.0"
-  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-core/-/easy-email-core-4.11.2-alpha.0.tgz#a03b0488d4f89add48aba4b0b98c401f6f40f4e9"
-  integrity sha512-gwNJiTadvQs1g/Ytw4TI1TfFuEcJZHWHWNXJmK2US7/shhf2SxCFC6Tudwtvdgnsqi5voOP37PVJpDp95o5b5g==
+"@hsuehpe/easy-email-core@^4.11.6-alpha.0":
+  version "4.11.6-alpha.0"
+  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-core/-/easy-email-core-4.11.6-alpha.0.tgz#f82de92e21cb3f56472d5d59bf1a4c09135d4b48"
+  integrity sha512-MOdrH8VkMay8o3eBcGL/HJXxIdh/2xkav9oW1rK6kC3T5QGFvTEodPvqEKABy/54RTA0Y5fnq7XIPzni86tB0g==
   dependencies:
     he "^1.2.0"
     js-beautify "^1.14.4"
-    lodash "^4.17.21"
+    lodash-es "^4.17.21"
     uuid "^8.3.2"
 
-"@hsuehpe/easy-email-editor@^4.11.4-alpha.0":
-  version "4.11.4-alpha.0"
-  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-editor/-/easy-email-editor-4.11.4-alpha.0.tgz#ff0c521456340129a8241722d9748dc8aeb2d6f3"
-  integrity sha512-PA5Ffb2a37PI3qVP2Xi9dd/V68PwOaOoIEZ/NzhlJIQvUc6clkKJ7Uje8h+OA7ZDt6Llhiod5AoJWV5p4KrtxQ==
+"@hsuehpe/easy-email-editor@^4.11.6-alpha.0":
+  version "4.11.6-alpha.0"
+  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-editor/-/easy-email-editor-4.11.6-alpha.0.tgz#bf655b0bb115e3ca7bb1872015295e82c70a4f89"
+  integrity sha512-TyRrEOIz7k7UhTkwd0HoXHZHELOAVXekJjIXfJ7yoCm9WeclBJofT1Lm/kk3M0Ud1txcyARP/oybvwG4Yfssvw==
   dependencies:
-    "@hsuehpe/easy-email-core" "^4.11.2-alpha.0"
+    "@hsuehpe/easy-email-core" "^4.11.6-alpha.0"
     final-form "^4.20.4"
     final-form-arrays "^3.0.2"
     final-form-set-field-touched "^1.0.1"
     is-hotkey "^0.2.0"
-    lodash "^4.17.21"
+    lodash-es "^4.17.21"
     react-final-form-arrays "^3.1.3"
     react-use "^17.3.1"
 

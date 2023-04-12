@@ -45,14 +45,14 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hsuehpe/easy-email-core@^4.11.2-alpha.0":
-  version "4.11.2-alpha.0"
-  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-core/-/easy-email-core-4.11.2-alpha.0.tgz#a03b0488d4f89add48aba4b0b98c401f6f40f4e9"
-  integrity sha512-gwNJiTadvQs1g/Ytw4TI1TfFuEcJZHWHWNXJmK2US7/shhf2SxCFC6Tudwtvdgnsqi5voOP37PVJpDp95o5b5g==
+"@hsuehpe/easy-email-core@^4.11.6-alpha.0":
+  version "4.11.6-alpha.0"
+  resolved "https://registry.yarnpkg.com/@hsuehpe/easy-email-core/-/easy-email-core-4.11.6-alpha.0.tgz#f82de92e21cb3f56472d5d59bf1a4c09135d4b48"
+  integrity sha512-MOdrH8VkMay8o3eBcGL/HJXxIdh/2xkav9oW1rK6kC3T5QGFvTEodPvqEKABy/54RTA0Y5fnq7XIPzni86tB0g==
   dependencies:
     he "^1.2.0"
     js-beautify "^1.14.4"
-    lodash "^4.17.21"
+    lodash-es "^4.17.21"
     uuid "^8.3.2"
 
 "@humanwhocodes/config-array@^0.5.0":
@@ -1667,11 +1667,6 @@ lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
-
-lodash@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
