@@ -2,7 +2,7 @@
   "name": "@hsuehpe/easy-email-extensions",
   "license": "MIT",
   "description": "Email editor",
-  "version": "4.11.6-alpha.0",
+  "version": "4.11.7-alpha.0",
   "author": "hsuehpe",
   "repository": {
     "type": "git",
@@ -77,8 +77,8 @@
   },
   "dependencies": {
     "@arco-design/web-react": "^2.36.1",
-    "@hsuehpe/easy-email-core": "^4.11.6-alpha.0",
-    "@hsuehpe/easy-email-editor": "^4.11.6-alpha.0",
+    "@hsuehpe/easy-email-core": "^4.11.7-alpha.0",
+    "@hsuehpe/easy-email-editor": "^4.11.7-alpha.0",
     "codemirror": "^5.63.3",
     "color": "^4.2.3",
     "final-form": "^4.20.4",
